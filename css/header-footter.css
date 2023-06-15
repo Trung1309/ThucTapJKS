@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+   
+}
+body{
+    box-sizing: border-box;
+    background: #BCBCBC;
+}
+
+header{
+    background: #FEFEFE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo-school{
+    width: 84px;
+    height: 62px;
+    margin: 0px 20px;
+
+}
+
+.active{
+    background: #E04622;
+    color: white;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    height: 86px;
+}
+
+.name-school{
+    text-transform: uppercase;
+    padding-top: 10px;
+
+}
+.name-school span{
+    color: #0E2D45;
+    font-weight: 700;
+    font-size: 13px;
+    
+}
+.name-school p{
+    color: #E04622;
+    font-weight: 700;
+    font-size: 13px;
+}
+.header-left{
+    display: flex;
+    align-items: center;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+
+}
+
+.header-right .date{
+    margin-right: 20px;
+    background: #0E2D45 ;
+    color: white;
+    font-size: 13px;
+    padding: 8px;
+    position: relative;
+    border-radius: 4px;
+}
+.header-right .date::after{
+    content: '';
+    position: absolute;
+    background: #0E2D45 ;
+    padding: 5px;
+    transform: rotate(45deg);
+    z-index: 0;
+    right: -5px;
+    top: 13px;
+}
+.header-nav {
+    background: #0E2D45;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+}
+.header-nav .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .nav-menu {
+    display: flex;   
+    transition: .5s;
+    line-height: 56px;
+    
+}
+.container ul li{
+    
+    font-size: 13px;
+    transition: .2s;
+}
+.container .nav-menu li a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px;
+    font-weight: 550;
+}
+
+.container  .nav-menu li a:hover{
+    background: #E04622;
+    transition: 0.2s;
+    border-radius: 10px;
+    
+    
+}
+
+/*Css phần searchbox*/
+.header-nav .search-box{
+    display: flex;
+    margin: 7px 0px;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.search-box input{
+    padding-left: 10px;
+    outline: none;
+    border: none;
+}
+.search-box button{
+    background: white;
+    padding: 0px 10px;
+    border: none;
+    outline: none;
+}
+
+.popup{
+    line-height: 56px;
+    display: none;
+    
+}
+
+
+/*Css footter*/
+footer{
+    background: #0E2D45;
+    padding-top: 50px;
+}
+footer .row-footter-top{
+    display: flex;
+    justify-content: space-around;
+    justify-self: start;
+}
+footer .row-footter-top .info img{
+    width: 300px;
+}
+footer .row-footter-top .info ul{
+    display: flex;
+    flex-direction: column;
+
+}
+footer .row-footter-top .info ul li{
+    color: white;
+    margin-top: 20px;
+    font-size: 14px;
+}
+footer .row-footter-top .info .info-title{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 30px;
+}
