@@ -1,22 +1,32 @@
 *{
     padding: 0;
     margin: 0;
-    text-decoration: none;
     list-style: none;
    
 }
 body{
     box-sizing: border-box;
     background: #BCBCBC;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
 }
 
 .section{
-    margin-top: 50px;
+    margin-top: 1rem;
 }
 /*Css slider*/
+.carousel-indicators{
+    z-index: 1 !important;
+}
 .carousel-item{
     max-width: 100%;
-    height: 600px;
+    height: auto;
     
 }
 .d-block{
@@ -28,17 +38,23 @@ body{
     position: relative;
     overflow: hidden;
 }
+.slide{
+    width: 100%;
+    height: auto;
+}
+
 .slider .cloud{
     position: absolute;
     left: 0;
     z-index: 0;
-    bottom: -240px;
+    bottom: -15rem;
     width: 100%;
+    height: 65%;
 }
 
 /*Phần giới Tiêu điểm*/
 .cards{
-    --spacing:30px;
+    --spacing:2rem;
     --columns:3;
     max-width: 100%;
     display: flex;
@@ -52,9 +68,9 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: var(--spacing);
 }
-.news-cards .card-top{
+.card .card-top{
     width: 100%;
-    height: 200px;
+    max-height: 60%;
 }
 .card-top .avt-card{
     width: 100%;
@@ -62,10 +78,9 @@ body{
     object-fit: cover;
 }
 .card-content{
-    padding: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 .card-title{
     color: #E04622;
@@ -74,7 +89,7 @@ body{
     display: block;
     display: -webkit-box;
     max-width: 100%;
-    height: 35px;
+    height: 3rem;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -88,28 +103,26 @@ body{
     display: block;
     display: -webkit-box;
     max-width: 100%;
-    height: 66px;
+    height: 82px;
     font-size: 14px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 10px;
-   
-
 }
 a.card-btn{
-    display: inline-block;
+    display: flex;
     background: #0E2D45;
-    padding: 9px 40px;
+    justify-content: center;
+    align-items: center;
     color: white;
     border-radius: 4px;
     border: none;
     margin-top: auto;
-    width: 141px;
-    height: 42px;
+    width: 50%;
+    height: 30%;
     text-decoration: none;
-    
+    margin-top: 20px;
     flex-shrink: 0;
 }
 .card-btn:hover{
@@ -126,17 +139,20 @@ h1.title{
     padding: 40px;
     text-align: center; 
     font-weight: 700; 
-    
+    margin-bottom: 0;
 }
 
 .about-school{
     background: #0E2D45;
     position: relative;
-    height: 600px;
+    height: auto;
     width: 100%;
     font-weight: 520;
+    padding: 20px;
 }
-
+.about-school .container{
+    display: flex;
+}
 .about-school-show .about-school-title{
     font-weight: 700px;
     font-size: 20px;
@@ -147,27 +163,18 @@ h1.title{
 
 
 .about-school .about-school-show{
-    position: absolute;
+    position: relative;
     background-color:white ;
-    width: 45%;
+    width: 60%;
     z-index: 2;
-    top: 50px;
-    left: 200px;
-    padding: 30px;
+    padding: 20px;
+    
 }
 
 .about-school .about-img img{  
-    position: absolute;
-    width: 35%;
-    height: 80%;
-    top: 100px;
-    right: 200px;
-    z-index: 1;
+    width: 100%;
 }
 /*Đội ngũ giáo viên*/
-.item-teacher{
-    
-}
 
 .item-teacher .item-teacher-avt{
     width: 200px;
@@ -211,7 +218,7 @@ h1.title{
     margin-top: 20px;
 }
 .item-teacher .social a{
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     border-radius: 50%;
 }
@@ -226,6 +233,7 @@ h1.title{
     font-size: 20px;
     color: #595857;
 }
+
 .slick-prev, .slick-next{
     width: 50px;
     height: 50px;
@@ -246,29 +254,52 @@ h1.title{
     outline: none;
     border: none;
     top: 50%;
-    left: -70px ;
+    left: -20px ;
     transform: translateY(-50%);
 }
 .slick-next{
     outline: none;
     border: none;
     top: 50%;
-    right: -70px ;
+    right: -20px ;
     transform: translateY(-50%);
 }
 .slick-slide{
-    margin: 10px;
+    position: relative;
+    margin: 2rem;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
+}
+.slick-dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    gap: 0 20px;
+    display: flex !important;
+
+}
+.slick-dots button{
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #eee;
+    transition: .4s ease-in-out;   
+}
+.slick-dots .slick-active button{
+    background: #E04622;  
 }
 /*Tin tức nổi bật*/
 .featured-news{
     background: #F2F5F9;
     height: 50%;
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 2rem;
 }
 
 .news-cards{
@@ -286,23 +317,34 @@ h1.title{
     margin-bottom: var(--spacing);
     position: relative;
 }
+
+.news-cards a.news-card:hover{
+    transform: scale(1.01);
+    transition: .3s;
+    text-decoration: none;
+}
+
 .news-card .date-post{
     position: absolute;
     background: #E04622;
     color: white;
+    font-size: 1em;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    font-weight: 800;
-    top: 50%;
-    transform: translateY(-60%);
+    font-weight: 600;
+    bottom: -25px;
+    z-index: 10;
     left: 2%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 4px;
 }
-.news-card .new-card-top{
+.news-card .news-card-top{
     width: 100%;
-    height: 250px;
-    overflow: hidden;
+    max-height: 50%;
+    position: relative;
 }
 .news-card .news-card-top img{
     width: 100%;
@@ -388,6 +430,138 @@ p#name-school-link{
     height: 100%;
     object-fit: cover;  
 }
+
+#backtop{
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #E04622;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    z-index: 100;
+}
+@media only screen and (max-width:1200px) {
+    .slider .cloud{
+        bottom: -10rem;
+    }
+    .about-school .about-img img{
+        width: 40%;
+        right: 100px;
+    }
+    .about-school .about-school-show{
+        width: 60%;
+        position: relative;
+        margin: 4rem;
+        left: 50px;
+        top: 50px;
+    }
+}
+
+@media only screen and  (max-width:1000px) {    
+    .cards{
+        --spacing:1.5rem;
+        --columns:2;   
+        display: flex;    
+        justify-content: center;
+    }
+    
+    .about-school .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+    }
+    .about-school .about-img{
+        position: relative;
+        width: 50%;
+    }
+    .about-school .about-img img{
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+    .about-school .about-school-show{
+        width: 80%;
+        position: relative;
+        margin: 2rem;
+        left: 0;
+        top: 0;
+    }
+    .news-cards{
+        --spacing:2rem; /*Khoảng cách giữa các card*/
+        --columns:2;    /*Số cột trên 1 hàng*/
+    }
+    
+}
+@media only screen and (max-width:768px) {
+    h1.title{
+        font-size: 25px;
+    }
+    .cards{
+        --spacing:2rem;
+        --columns:2;   
+        display: flex;    
+        justify-content: center;
+    }
+    .news-cards{
+        --columns:2;  
+    }
+    .news-card-bottom .news-card-content{
+        font-size: 16px;
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        height: 77px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .news-card .date-post{
+        font-weight: 600;
+        bottom: -25px;
+        left: 2%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:570px){
+    .cards{
+        --columns:1;   
+    }
+    .news-cards{
+        --columns:1;  
+    }
+    .news-card .date-post{
+        font-weight: 600;
+        bottom: -25px;
+        left: 2%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+    .about-school-show .about-school-content{
+        font-size: 12px;
+    }
+}
+
+@media screen {
+    
+}
+
+
+
+
 
 
 
