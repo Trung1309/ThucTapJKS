@@ -9,6 +9,7 @@ body{
     background: #BCBCBC;
     padding: 0;
     margin: 0;
+    transition: all .3s;
 }
 a{
     text-decoration: none;
@@ -148,31 +149,42 @@ h1.title{
     height: auto;
     width: 100%;
     font-weight: 520;
-    padding: 20px;
+    padding: 50px 0px 120px 0px;
 }
 .about-school .container{
     display: flex;
+    position: relative;
 }
 .about-school-show .about-school-title{
     font-weight: 700px;
-    font-size: 20px;
+    font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 800;
     margin-bottom: 10px;
 }
-
-
 .about-school .about-school-show{
     position: relative;
     background-color:white ;
-    width: 60%;
-    z-index: 2;
-    padding: 20px;
-    
+    width: 70%;
+    padding: 70px;
+    margin-right: -100px;
+    z-index: 1;
+    font-size: 15px;
+    text-align: justify;
 }
-
+.about-school .about-img{
+    width: 500px;
+    height: 500px;
+    right:0%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    top: 40px;
+}
 .about-school .about-img img{  
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /*Đội ngũ giáo viên*/
 
@@ -271,6 +283,7 @@ h1.title{
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
+    text-align: center;
 }
 .slick-dots{
     position: absolute;
@@ -450,16 +463,23 @@ p#name-school-link{
     .slider .cloud{
         bottom: -10rem;
     }
-    .about-school .about-img img{
-        width: 40%;
-        right: 100px;
+    .about-school-content{
+        font-size: 14px;
     }
     .about-school .about-school-show{
-        width: 60%;
         position: relative;
-        margin: 4rem;
-        left: 50px;
-        top: 50px;
+    }
+    .about-school-show .about-school-title{
+        font-size: 20px;
+    }
+    .about-school .about-img{
+        width: ;
+    }
+    .about-school .about-img img{
+        position: absolute;
+        
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -480,21 +500,15 @@ p#name-school-link{
     }
     .about-school .about-img{
         position: relative;
-        width: 50%;
     }
     .about-school .about-img img{
         position: relative;
         width: 100%;
-        right: 0;
-        top: 0;
-        margin-bottom: 2rem;
     }
     .about-school .about-school-show{
-        width: 80%;
+        width: 100%;
         position: relative;
-        margin: 2rem;
-        left: 0;
-        top: 0;
+        margin: .5rem;
     }
     .news-cards{
         --spacing:2rem; /*Khoảng cách giữa các card*/
@@ -526,6 +540,13 @@ p#name-school-link{
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .about-school .about-school-show{
+        padding: 30px;
+    }
+    .about-school .about-img{
+        width: 300px;
+        height: 300px;
+    }
     .news-card .date-post{
         font-weight: 600;
         bottom: -25px;
@@ -552,6 +573,10 @@ p#name-school-link{
     }
     .about-school-show .about-school-content{
         font-size: 12px;
+    }
+    .about-school .about-img{
+        width: 90%;
+        height: auto;
     }
 }
 

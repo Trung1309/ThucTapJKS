@@ -17,13 +17,13 @@ header{
     align-items: center;
 }
 header .logo-school{
-    width: 84px;
-    height: 62px;
+    width: 70%;
+    height: auto;
     margin: 0px 20px;
 }
 .header-top{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 86px;
 }
 
@@ -50,6 +50,7 @@ header .logo-school{
 .header-right{
     display: flex;
     align-items: center;
+    width: 80%;
 
 }
 .header-right .header-right-text{
@@ -196,6 +197,7 @@ footer .row-footter-top .info .info-title{
 @media screen and (max-width:1200px) {
     header .logo-school{
         margin: 0px;
+        width: 90%;
     }
     .hambuger{
         display: block;
@@ -227,6 +229,7 @@ footer .row-footter-top .info .info-title{
     }
     .nav-menu .nav-link{
         display: inline-block;
+        text-align: center;
 
     }
     .nav-menu.active{
@@ -265,6 +268,7 @@ footer .row-footter-top .info .info-title{
 
 @media only screen and (max-width:320px){
     footer .row-footter-top .info img{
-        width: 250px;
+        width: 100%;
+        height: auto;
     }
 }
