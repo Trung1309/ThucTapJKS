@@ -331,7 +331,7 @@ h1.title{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: var(--spacing);
     position: relative;
-    transition: .4s;
+    transition: .5s;
 }
 
 .news-cards a.news-card:hover{

@@ -226,7 +226,9 @@ footer .row-footter-top .info .info-title{
     font-weight: 700;
     margin-top: 30px;
 }
-
+@media screen and (max-width:1300px){
+    
+}
 @media screen and (max-width:1200px) {
     header .logo-school{
         margin: 0px;
