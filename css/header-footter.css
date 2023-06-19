@@ -113,9 +113,13 @@ header .logo-school{
 }
 .sub-menu li{
     border-bottom: 1px solid #BCBCBC;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.sub-menu li:hover a{ 
-    color: #E04622;
+.sub-menu li:hover{ 
+    background-color: #E04622;
     
 }
 .container .nav-menu li a{
@@ -142,12 +146,44 @@ header .logo-school{
     top: 56px;
     transition: .5s;
 }
-.sub-menu li:hover{
-    background-color: #E04622;
-}
-.sub-menu li i{
+
+.sub-menu li .fa-arrow-right{
     display: none;
 }
+.sub-menu li .fa-chevron-right{
+    margin-right: 15px;
+}
+.sub-menu li a{
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+.sub-menu .sub-menu-item{
+    position: absolute;
+    background: #0E2D45;
+    top: 0px;
+    right: -190px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+.sub-menu .sub-menu-item li{
+    padding: 0px;
+}
+
+.sub-menu li:hover .sub-menu-item{
+    visibility: visible;
+    opacity: 1;
+    right: -203px;
+    width: 200px;
+
+}
+.sub-menu .fa-chevron-down{
+    display: none;
+}
+
 
 /*Css phần searchbox*/
 .header-nav .search-box{
@@ -227,13 +263,17 @@ footer .row-footter-top .info .info-title{
     margin-top: 30px;
 }
 @media screen and (max-width:1300px){
-    
+    .slider .cloud{
+        bottom: -15rem;
+    }
 }
 @media screen and (max-width:1200px) {
     header .logo-school{
         margin: 0px;
         width: 90%;
     }
+
+
     .hambuger{
         display: block;
     } 
@@ -246,49 +286,106 @@ footer .row-footter-top .info .info-title{
     .hambuger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(45deg);
     }
+    .sub-menu li:hover .sub-menu-item{
+        width: 100%;
+    }
     .nav-menu{
         display: block;
         position:absolute;
         gap: 10px;
         z-index: 10;
-        top: 142px;  
+        top: 162px;  
         flex-direction: column;
         background-color: #0E2D45;
         align-items: center;
         justify-content: center;
-        width: 0%;
+        width: 100%;
         right: 0;
         overflow: hidden;
         height: auto;
+        visibility: hidden;
         opacity: 0;
         padding: 20px;
     }
+    .nav-menu li a{
+        border-bottom: 1px solid #BCBCBC;
+    }
+    .sub-menu li a::before{
+        content: '>> ';
+        padding-left: 30px;
+    }
+    .sub-menu li a:hover{
+        color: #E04622;
+        background: #BCBCBC;
+        transition: .4s;
+    }
+    .sub-menu li a:hover>.sub-menu-link{
+        color: #E04622;
+        background: #BCBCBC;
+        transition: .4s;
+    }
+    .sub-menu-item li a:hover {
+        color: #E04622;
+        background: #BCBCBC;
+        transition: .4s;
+    }
+    .sub-menu li .sub-menu-item li::before{
+        padding-left: 30px;
+    }
+
     .nav-menu li{
         display: inline-block !important;
         width: 100%;
     }
+
     .nav-menu .nav-link{
         display: inline-block;
         text-align: center;
 
+    }
+    .nav-menu li:hover{
+        background: transparent !important;
+        
     }
     .sub-menu{
         position: unset;
         visibility: visible;
         opacity: 1;
         width: 100%;
+       
     }
-    .sub-menu li{
-        padding-left: 20px;
+
+    .sub-menu .nav-link a:hover{
+        background-color: transparent;
+        color: #E04622;
     }
     .nav-menu.active{
+        top: 142px; 
+        visibility: visible;
         opacity: 1;
         width: 100%;
     }
-    .sub-menu li i {
+    .sub-menu li .fa-arrow-right{
         display: inline-block;
         margin-left: 20px;
         
+    }
+    .sub-menu li .fa-chevron-right{
+        display: none;
+        margin-left: 20px;
+        
+    }
+    .sub-menu .sub-menu-item{
+        position: unset;
+        background: #0E2D45;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .sub-menu .sub-menu-item li,
+    .sub-menu .sub-menu-item li a{
+        width: 100%;
+        padding-left: 20px;
     }
     .header-nav .search-box{
         width: 80%;
