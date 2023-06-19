@@ -82,8 +82,8 @@ header .logo-school{
     display: flex;
     justify-content: space-between;
     height: 56px;
-
 }
+
 .header-nav .container{
     display: flex;
     justify-content: space-between;
@@ -93,25 +93,60 @@ header .logo-school{
     display: flex;   
     transition: .5s;
     line-height: 56px;
+    
 }
 .container .nav-menu li{
-    
+    position: relative;
     font-size: 13px;
     transition: .2s;
+    border-bottom: #BCBCBC;
+}
+.sub-menu{
+    position: absolute;
+    z-index: 10;
+    background-color: #0E2D45;
+    width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    top: 90px;
+    border-radius: 4px;
+}
+.sub-menu li{
+    border-bottom: 1px solid #BCBCBC;
+}
+.sub-menu li:hover a{ 
+    color: #E04622;
     
 }
 .container .nav-menu li a{
     color: white;
     text-decoration: none;
-    display: inline-block;
     padding: 0px 20px;
     font-weight: 550;
+    font-size: 12px;
 }
-
-.container  .nav-menu li:hover{
-    background: #E04622;
+.container .nav-menu .nav-link{
+    width: 100%;
+    text-align: left;
+    
+}
+.container  .nav-menu .nav-link:hover{
     transition: 0.2s;
     border-radius: 10px;
+    background-color: #E04622;
+}
+
+.container  .nav-menu li:hover .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    top: 56px;
+    transition: .5s;
+}
+.sub-menu li:hover{
+    background-color: #E04622;
+}
+.sub-menu li i{
+    display: none;
 }
 
 /*Css phần searchbox*/
@@ -122,7 +157,7 @@ header .logo-school{
     background: white;
     padding: 5px;
     border-radius: 10px;
-    width: 30%;
+    width: 20%;
     justify-content: space-between;
 }
 
@@ -191,9 +226,7 @@ footer .row-footter-top .info .info-title{
     font-weight: 700;
     margin-top: 30px;
 }
-@media screen and (min-width:200){
 
-}
 @media screen and (max-width:1200px) {
     header .logo-school{
         margin: 0px;
@@ -212,9 +245,9 @@ footer .row-footter-top .info .info-title{
         transform: translateY(-8px) rotate(45deg);
     }
     .nav-menu{
-        display: none;
+        display: block;
         position:absolute;
-        gap: 30px;
+        gap: 10px;
         z-index: 10;
         top: 142px;  
         flex-direction: column;
@@ -224,17 +257,36 @@ footer .row-footter-top .info .info-title{
         width: 0%;
         right: 0;
         overflow: hidden;
-        height: 500px;
+        height: auto;
         opacity: 0;
+        padding: 20px;
+    }
+    .nav-menu li{
+        display: inline-block !important;
+        width: 100%;
     }
     .nav-menu .nav-link{
         display: inline-block;
         text-align: center;
 
     }
-    .nav-menu.active{
-        width: 100%;
+    .sub-menu{
+        position: unset;
+        visibility: visible;
         opacity: 1;
+        width: 100%;
+    }
+    .sub-menu li{
+        padding-left: 20px;
+    }
+    .nav-menu.active{
+        opacity: 1;
+        width: 100%;
+    }
+    .sub-menu li i {
+        display: inline-block;
+        margin-left: 20px;
+        
     }
     .header-nav .search-box{
         width: 80%;
@@ -242,9 +294,6 @@ footer .row-footter-top .info .info-title{
     
 }
 @media screen and (max-width:992px) {
-    header .logo-school{
-
-    }
     .name-school p, 
     .header-right .date,
     .name-school span{
@@ -256,7 +305,9 @@ footer .row-footter-top .info .info-title{
     }
 }
 
-@media only screen and (max-width:768px) {
+
+
+@media  screen and (max-width:768px) {
     footer .row-footter-top{
         flex-direction: column;
     }
