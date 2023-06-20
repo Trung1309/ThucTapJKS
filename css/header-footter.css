@@ -297,6 +297,14 @@ footer .copyright-follow{
         bottom: -15rem;
     }
 }
+@media screen and (min-width:1201px) {
+    .nav-menu .nav-menu-item .sub-menu{
+        display: block !important;
+    }
+    .nav-menu .nav-menu-item .sub-menu .sub-menu-item{
+        display: block !important;
+    }
+}
 @media screen and (max-width:1200px) {
     header .logo-school{
         margin: 0px;
@@ -461,10 +469,9 @@ footer .copyright-follow{
         background: #BCBCBC;
         color: #E04622 !important;
     }
-    .nav-menu .nav-menu-item .btn-down,
-    .sub-menu li .btn-down-2{
-    display: block;
-    }
+    .nav-menu .nav-menu-item .btn-down{
+        display: block;
+        }
     i.down-menu-chinh{
         display: none;
     }
