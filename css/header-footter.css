@@ -117,9 +117,15 @@ header .logo-school{
     justify-content: space-between;
     align-items: center;
 }
+.sub-menu li .fa-chevron-right{
+    text-align: right;
+}
 .sub-menu li:hover{ 
     background-color: #E04622;
     
+}
+.sub-menu li .btn-down-2{
+    display: none;
 }
 .sub-menu li .fa-arrow-right{
     display: none;
@@ -144,9 +150,7 @@ header .logo-school{
     padding: 0px 20px;
 
 }
-.container .nav-menu-item .nav-menu-title{
-    display: flex;
-}
+
 .container .nav-menu .nav-link{
     text-align: left;
     padding: 0px 5px 0px 0px !important;
@@ -315,6 +319,9 @@ footer .copyright-follow{
     .sub-menu li:hover .sub-menu-item{
         width: 100%;
     }
+    .sub-menu li .btn-down-2{
+        display: block;
+    }
     .nav-menu{
         display: none;
         position:absolute;
@@ -332,39 +339,31 @@ footer .copyright-follow{
         opacity: 0;
         padding: 20px;
     }
+   
     .container .nav-menu .nav-link{
         padding: 0.5rem 1rem !important; 
     }
     .container .nav-menu li a{
         font-size: 20px;
     }
-    .sub-menu .sub-menu-title{
-        width: 100%;
+    .container .nav-menu-item .btn-down{
+        position: absolute;
+        right: 60px;
+        top: 20px;
+        transition: .3s;
+        font-size: 20px;
     }
-    .container .nav-menu-item .nav-menu-title{
-        display: flex ;
-        justify-content: space-between;
-        width: 100%;
-
-    }
-    .container .nav-menu-item .nav-menu-title .btn-down{
-        cursor: pointer;
-        margin-right: 30px;
-        font-size: 25px;
+    
+    .container .nav-menu-item .dropdown-btn{
+        font-size: 23px;
         padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
         transition: .3s;
     }
-    .container .nav-menu-item .nav-menu-title .btn-down i{
-        transition: .3s ease-in-out;
-        padding: 10px;
-        border-radius: 50%;
-        
-    }
-
-    .container .nav-menu-item .nav-menu-title .btn-down i:hover{
-        color: #E04622 !important;
+    .container .nav-menu-item .btn-down i:hover{
         background: #BCBCBC;
-        
+        color: #E04622 !important;
     }
 
 
@@ -376,8 +375,7 @@ footer .copyright-follow{
         content: '>> ';
         padding-left: 30px;
     }
-    .sub-menu li a:hover{
-        
+    .sub-menu li a:hover{       
         background: #E04622;
         transition: .4s;
     }
@@ -394,7 +392,7 @@ footer .copyright-follow{
         display: inline-block !important;
         width: 100%;
     }
-
+    
 
     .nav-menu li:hover{
         background: transparent !important;
@@ -440,22 +438,23 @@ footer .copyright-follow{
         width: 100%;
         padding-left: 20px;
     }
-    .sub-menu .sub-menu-title{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .sub-menu-title .fa-chevron-right{
+    .sub-menu li .fa-chevron-right{
         display: none;
     }
-    .sub-menu-title .fa-chevron-down{
+    .sub-menu li .fa-chevron-down{
         display: block;
+        position: absolute;
         font-size: 20px;
-        margin-right: 48px;
         cursor: pointer;
-        padding: 5px;
+        right: 41px;
+        top: 20px;
         border-radius: 50%;
         transition: .2s;
+        padding: 10px;
+    }
+    .sub-menu li .fa-chevron-down:hover{
+        background: #BCBCBC;
+        color: #E04622 !important;
     }
     .sub-menu-title .fa-chevron-down:hover{
         background: #BCBCBC;
@@ -487,7 +486,31 @@ footer .copyright-follow{
     }
     
 }
+@media only screen and (max-width:500px) {
+    .container .nav-menu .nav-link{
+        font-size: 15px;
+    }
+    .sub-menu li .fa-chevron-down{
+        top: 10px;
+        right: -15px;
+        font-size: 14px;
+    }
+    .sub-menu li a{
+        font-size: 15px !important;
+    }
+    .container .nav-menu-item .btn-down{
+        right: 0px;
+        top: 15px;
+        
 
+    }
+    .sub-menu li a::before{
+        padding-left:20px ;
+    }
+    .sub-menu-item li a::before{
+        padding-left: 10px !important;
+    }
+}
 @media only screen and (max-width:320px){
     footer .row-footter-top .info img{
         width: 100%;

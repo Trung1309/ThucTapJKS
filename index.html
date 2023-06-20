@@ -34,21 +34,44 @@
                             <a href="#" class="nav-link">TRANG CHỦ</a>
                         </div>  
                     </li>
-                    <li class="nav-menu-item">
-                        <div class="nav-menu-title">
-                            <a href="#" class="nav-link">GIỚI THIỆU </a>
-                            <div class="btn-down">
-                                <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
-                            </div>
-                        </div>               
+                    <li class="nav-menu-item">                       
+                        <a href="#" class="nav-link">GIỚI THIỆU </a>  
+                        <div class="btn-down">
+                            <i class="fa-solid fa-chevron-down dropdown-btn" style="color: #ffffff;"></i>
+                        </div>          
                         <ul class="sub-menu">
                             <li><a href="#">Menu-1</a></li>
                             <li><a href="#">Menu-2</a></li>
                             <li>
-                                <div class="sub-menu-title">
-                                    <a href="#">Menu-3</a> 
-                                    <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i>
-                                    <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
+                                <a href="#">Menu-3</a> 
+                                <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i>
+                                <div class="btn-down-2">
+                                    <i class="fa-solid fa-chevron-down dropdown-btn-2" style="color: #ffffff;"></i>
+                                </div>
+                                
+                            
+                                <ul class="sub-menu-item">
+                                    <li><a href="#">Menu-item-1</a></li>
+                                    <li><a href="#">Menu-item-2</a></li>
+                                    <li><a href="#">Menu-item-3</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="#" class="nav-link">60 NĂM </a>
+                        <div class="btn-down">
+                            <i class="fa-solid fa-chevron-down dropdown-btn" style="color: #ffffff;"></i>
+                        </div>                 
+                        <ul class="sub-menu">
+                            <li><a href="#">Menu-1</a></li>
+                            <li><a href="#">Menu-2</a></li>
+                            <li>
+                                <a href="#">Menu-3</a> 
+                                <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i>
+                                <div class="btn-down-2">
+                                    <i class="fa-solid fa-chevron-down dropdown-btn-2" style="color: #ffffff;"></i>
                                 </div>
                                 <ul class="sub-menu-item">
                                     <li><a href="#">Menu-item-1</a></li>
@@ -60,37 +83,12 @@
                         </ul>
                     </li>
                     <li class="nav-menu-item">
-                        <div class="nav-menu-title">
-                            <a href="#" class="nav-link">60 NĂM </a>
-                            <div class="btn-down">
-                                <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
-                            </div>
-                        </div>  
-                        <ul class="sub-menu">
-                            <li><a href="#">Menu-1</a></li>
-                            <li><a href="#">Menu-2</a></li>
-                            <li>
-                                <div class="sub-menu-title">
-                                    <a href="#">Menu-3</a> 
-                                    <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i>
-                                    <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
-                                </div>
-                                <ul class="sub-menu-item">
-                                    <li><a href="#">Menu-item-1</a></li>
-                                    <li><a href="#">Menu-item-2</a></li>
-                                    <li><a href="#">Menu-item-3</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-menu-item">
-                        <div class="nav-menu-title">
-                            <a href="#" class="nav-link">CHUYÊN MÔN </a>
-                            <div class="btn-down">
-                                <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
-                            </div>
-                        </div>  
+                    
+                        <a href="#" class="nav-link">CHUYÊN MÔN </a>
+                        <div class="btn-down">
+                            <i class="fa-solid fa-chevron-down dropdown-btn" style="color: #ffffff;"></i>
+                        </div> 
+                
                         <ul class="sub-menu">
                             <li><a href="#">Menu-1</a></li>
                             <li><a href="#">Menu-2</a></li>
@@ -101,12 +99,12 @@
                         </ul>       
                     </li>
                     <li class="nav-menu-item">
-                        <div class="nav-menu-title">
+                      
                             <a href="#" class="nav-link">CHUYÊN MỤC HỌC SINH </a>
                             <div class="btn-down">
-                                <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
+                                <i class="fa-solid fa-chevron-down dropdown-btn" style="color: #ffffff;"></i>
                             </div>
-                        </div>  
+                     
                         <ul class="sub-menu">
                             <li><a href="#">Menu-1</a></li>
                             <li><a href="#">Menu-2</a></li>
@@ -114,12 +112,12 @@
                         </ul>   
                     </li>
                     <li class="nav-menu-item">
-                        <div class="nav-menu-title">
+                    
                             <a href="#" class="nav-link">TIN TỨC SỰ KIỆN </a>
                             <div class="btn-down">
-                                <i class="fa-solid fa-chevron-down dropdown" style="color: #ffffff;"></i>
+                                <i class="fa-solid fa-chevron-down dropdown-btn" style="color: #ffffff;"></i>
                             </div>
-                        </div>  
+                 
                         <ul class="sub-menu">
                             <li><a href="#">Menu-1</a></li>
                             <li><a href="#">Menu-2</a></li>
@@ -551,9 +549,9 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.nav-menu-title').click(function(){
+            $('.btn-down').click(function(){
                 $(this).next('.sub-menu').slideToggle();
-                $(this).find('.dropdown').toggleClass('rotate');
+                $(this).find('.dropdown-btn').toggleClass('rotate');
             })
           })
   
@@ -561,9 +559,10 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.sub-menu-title').click(function(){
+            $('.btn-down-2').click(function(){
                 $(this).next('.sub-menu-item').slideToggle();
-                $(this).find('.dropdown').toggleClass('rotate');
+                $(this).find('.dropdown-btn-2').toggleClass('rotate');
+                
             })
           })
     </script>
