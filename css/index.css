@@ -446,6 +446,9 @@ p#name-school-link{
     height: 100%;
     object-fit: cover;  
 }
+.copyright-inner{
+    border-top: 1px solid #b2bec3;
+}
 
 #backtop{
     padding: 20px;

@@ -93,13 +93,12 @@ header .logo-school{
     display: flex;   
     transition: .5s;
     line-height: 56px;
-    
+    margin: 0px !important;
 }
 .container .nav-menu li{
     position: relative;
     font-size: 13px;
     transition: .2s;
-    border-bottom: #BCBCBC;
 }
 .sub-menu{
     position: absolute;
@@ -109,10 +108,10 @@ header .logo-school{
     visibility: hidden;
     opacity: 0;
     top: 90px;
+    left: 0;
     border-radius: 4px;
 }
 .sub-menu li{
-    border-bottom: 1px solid #BCBCBC;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -122,31 +121,6 @@ header .logo-school{
     background-color: #E04622;
     
 }
-.container .nav-menu li a{
-    color: white;
-    text-decoration: none;
-    padding: 0px 20px;
-    font-weight: 550;
-    font-size: 12px;
-}
-.container .nav-menu .nav-link{
-    width: 100%;
-    text-align: left;
-    
-}
-.container  .nav-menu .nav-link:hover{
-    transition: 0.2s;
-    border-radius: 10px;
-    background-color: #E04622;
-}
-
-.container  .nav-menu li:hover .sub-menu{
-    visibility: visible;
-    opacity: 1;
-    top: 56px;
-    transition: .5s;
-}
-
 .sub-menu li .fa-arrow-right{
     display: none;
 }
@@ -154,9 +128,45 @@ header .logo-school{
     margin-right: 15px;
 }
 .sub-menu li a{
-    width: 100%;
     display: inline-block;
+    margin-left: 20px;
 }
+.container .nav-menu li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 12px;
+}
+.container .nav-menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+
+}
+.container .nav-menu-item .nav-menu-title{
+    display: flex;
+}
+.container .nav-menu .nav-link{
+    text-align: left;
+    padding: 0px 5px 0px 0px !important;
+    display: inline-block !important;
+}
+.container  .nav-menu .nav-menu-item:hover{
+    transition: 0.2s;
+    border-radius: 10px;
+    background-color: #E04622;
+}
+
+.container  .nav-menu .nav-menu-item:hover .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    top: 58px;
+    left: 0px;
+    transition: .2s;
+}
+
+
 
 
 
@@ -167,7 +177,7 @@ header .logo-school{
     right: -190px;
     visibility: hidden;
     opacity: 0;
-    transition: .3s;
+    transition: .2s;
 }
 .sub-menu .sub-menu-item li{
     padding: 0px;
@@ -176,7 +186,7 @@ header .logo-school{
 .sub-menu li:hover .sub-menu-item{
     visibility: visible;
     opacity: 1;
-    right: -203px;
+    right: -202px;
     width: 200px;
 
 }
@@ -230,17 +240,23 @@ header .logo-school{
     background: white;
     transition: all .3s ease-in-out;
 }
-
+.rotate{
+    transform: rotate(180deg);
+}
 
 /*Css footter*/
 footer{
     background: #0E2D45;
-    padding-top: 50px;
+    
 }
 footer .row-footter-top{
     display: flex;
     justify-content: space-around;
     justify-self: start;
+}
+footer .footter-top{
+    display: block;
+    padding: 50px 0px;
 }
 footer .row-footter-top .info img{
     width: 300px;
@@ -262,6 +278,15 @@ footer .row-footter-top .info .info-title{
     font-weight: 700;
     margin-top: 30px;
 }
+footer .footter-bottom{
+    border-top: 1px solid #BCBCBC;
+}
+footter .footter-bottom .row-footter-bottom .copyright-row{
+    display: flex;
+}
+footer .copyright-follow{
+    display: flex;
+}
 @media screen and (max-width:1300px){
     .slider .cloud{
         bottom: -15rem;
@@ -272,8 +297,6 @@ footer .row-footter-top .info .info-title{
         margin: 0px;
         width: 90%;
     }
-
-
     .hambuger{
         display: block;
     } 
@@ -286,13 +309,15 @@ footer .row-footter-top .info .info-title{
     .hambuger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(45deg);
     }
+    .header-nav .search-box{
+        width: 80%;
+    }
     .sub-menu li:hover .sub-menu-item{
         width: 100%;
     }
     .nav-menu{
-        display: block;
+        display: none;
         position:absolute;
-        gap: 10px;
         z-index: 10;
         top: 162px;  
         flex-direction: column;
@@ -300,33 +325,65 @@ footer .row-footter-top .info .info-title{
         align-items: center;
         justify-content: center;
         width: 100%;
-        right: 0;
+        left: 0;
         overflow: hidden;
         height: auto;
         visibility: hidden;
         opacity: 0;
         padding: 20px;
     }
-    .nav-menu li a{
-        border-bottom: 1px solid #BCBCBC;
+    .container .nav-menu .nav-link{
+        padding: 0.5rem 1rem !important; 
     }
+    .container .nav-menu li a{
+        font-size: 20px;
+    }
+    .sub-menu .sub-menu-title{
+        width: 100%;
+    }
+    .container .nav-menu-item .nav-menu-title{
+        display: flex ;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+    .container .nav-menu-item .nav-menu-title .btn-down{
+        cursor: pointer;
+        margin-right: 30px;
+        font-size: 25px;
+        padding: 10px;
+        transition: .3s;
+    }
+    .container .nav-menu-item .nav-menu-title .btn-down i{
+        transition: .3s ease-in-out;
+        padding: 10px;
+        border-radius: 50%;
+        
+    }
+
+    .container .nav-menu-item .nav-menu-title .btn-down i:hover{
+        color: #E04622 !important;
+        background: #BCBCBC;
+        
+    }
+
+
     .sub-menu li a::before{
+        content: '> ';
+        padding-left: 30px;
+    }
+    .sub-menu-item li a::before{
         content: '>> ';
         padding-left: 30px;
     }
     .sub-menu li a:hover{
-        color: #E04622;
-        background: #BCBCBC;
+        
+        background: #E04622;
         transition: .4s;
     }
-    .sub-menu li a:hover>.sub-menu-link{
-        color: #E04622;
-        background: #BCBCBC;
-        transition: .4s;
-    }
-    .sub-menu-item li a:hover {
-        color: #E04622;
-        background: #BCBCBC;
+
+    .sub-menu-item li a:hover{
+        background: #E04622;
         transition: .4s;
     }
     .sub-menu li .sub-menu-item li::before{
@@ -338,20 +395,19 @@ footer .row-footter-top .info .info-title{
         width: 100%;
     }
 
-    .nav-menu .nav-link{
-        display: inline-block;
-        text-align: center;
 
-    }
     .nav-menu li:hover{
         background: transparent !important;
         
     }
+    
     .sub-menu{
         position: unset;
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
+        display: none;
         width: 100%;
+        transition: .3s;
        
     }
 
@@ -364,16 +420,12 @@ footer .row-footter-top .info .info-title{
         visibility: visible;
         opacity: 1;
         width: 100%;
+        display: block;
+        transition: .3s;
     }
-    .sub-menu li .fa-arrow-right{
-        display: inline-block;
-        margin-left: 20px;
-        
-    }
-    .sub-menu li .fa-chevron-right{
-        display: none;
-        margin-left: 20px;
-        
+    .container .nav-menu li a:hover{
+        background: none;
+        color: #E04622;       
     }
     .sub-menu .sub-menu-item{
         position: unset;
@@ -381,15 +433,35 @@ footer .row-footter-top .info .info-title{
         width: 100%;
         opacity: 1;
         visibility: visible;
+        display: none;
     }
     .sub-menu .sub-menu-item li,
     .sub-menu .sub-menu-item li a{
         width: 100%;
         padding-left: 20px;
     }
-    .header-nav .search-box{
-        width: 80%;
+    .sub-menu .sub-menu-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+    .sub-menu-title .fa-chevron-right{
+        display: none;
+    }
+    .sub-menu-title .fa-chevron-down{
+        display: block;
+        font-size: 20px;
+        margin-right: 48px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+        transition: .2s;
+    }
+    .sub-menu-title .fa-chevron-down:hover{
+        background: #BCBCBC;
+        color: #E04622 !important;
+    }
+    
     
 }
 @media screen and (max-width:992px) {
