@@ -124,6 +124,7 @@ header .logo-school{
     background-color: #E04622;
     
 }
+.nav-menu .nav-menu-item .btn-down,
 .sub-menu li .btn-down-2{
     display: none;
 }
@@ -460,8 +461,13 @@ footer .copyright-follow{
         background: #BCBCBC;
         color: #E04622 !important;
     }
-    
-    
+    .nav-menu .nav-menu-item .btn-down,
+    .sub-menu li .btn-down-2{
+    display: block;
+    }
+    i.down-menu-chinh{
+        display: none;
+    }
 }
 @media screen and (max-width:992px) {
     .name-school p, 
