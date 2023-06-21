@@ -6,7 +6,7 @@
 }
 body{
     box-sizing: border-box;
-    background: #BCBCBC;
+    background: #FEFEFE;
     padding: 0;
     margin: 0;
     transition: all .3s;
@@ -73,7 +73,7 @@ a:hover{
 }
 .card .card-top{
     width: 100%;
-    max-height: 60%;
+    height: 200px;
 }
 .card-top .avt-card{
     width: 100%;
@@ -613,10 +613,6 @@ p#name-school-link{
         width: 90%;
         height: auto;
     }
-}
-
-@media screen {
-    
 }
 
 

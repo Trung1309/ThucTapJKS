@@ -1,20 +1,8 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-   
-}
-body{
-    box-sizing: border-box;
-    background: #BCBCBC;
-}
-
 header{
     background: #FEFEFE;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 header .logo-school{
     width: 70%;
@@ -87,6 +75,7 @@ header .logo-school{
 .header-nav .container{
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .container .nav-menu {
@@ -350,7 +339,7 @@ footer .copyright-follow li{
         display: none;
         position:absolute;
         z-index: 10;
-        top: 162px;  
+        top: 70px;  
         flex-direction: column;
         background-color: #0E2D45;
         align-items: center;
@@ -438,7 +427,7 @@ footer .copyright-follow li{
         color: #E04622;
     }
     .nav-menu.active{
-        top: 142px; 
+        top: 56px; 
         visibility: visible;
         opacity: 1;
         width: 100%;
